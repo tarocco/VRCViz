@@ -109,7 +109,7 @@ public static class Drawing
                                       bool antiAlias, int segments)
     {
         Vector2 lastV = CubeBezier(start, startTangent, end, endTangent, 0);
-        for (int i = 1; i < segments; ++i)
+        for (int i = 1; i <= segments; ++i)
         {
             Vector2 v = CubeBezier(start, startTangent, end, endTangent, i / (float)segments);
             Drawing.DrawLine(lastV, v, color, width, antiAlias);
